@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="img/worldwide.png" type="image/icon" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>dr Bartłomiej Szypuła</title>
+</head>
+
+<body>
+    <nav id="nav">
+        <ul>
+            <li>
+                <h2 class="title">dr Bartłomiej Szypuła</h2>
+            </li>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="publikacje.html">Publikacje</a></li>
+            <li><a href="kursy.html">Kursy</a></li>
+            <li><a href="konferencje.html">Konferencje</a></li>
+            <li><a href="projekty.html">Projekty</a></li>
+            <li><a href="popularyzacja.html">Popularyzacja</a></li>
+            <li><a href="">ENG</a></li>
+            <li id="btn"><a href=""><i class="fa-regular fa-sun"></i></a></li>
+
+        </ul>
+    </nav>
+
+    <section><img src="img/back.jpg" width="100%"></section>
+
+    <section id="content">
+        <ul>
+            <li><img src="img/tata.jpg" width="330px" id="person"></li>
+            <li>
+                <h3 class="title">O mnie</h3>
+                Jestem geografem, geomorfologiem i specjalistą od systemów GIS. Studia magisterskie na Wydziale Nauk o
+                Ziemi Uniwersytetu Śląskiego w Katowicach ukończyłem w czerwcu 2000 r., a w 2007 r. obroniłem pracę
+                doktorską na temat rzeźby strukturalnej Wyżyny Śląskiej. Od tamtej pory moje zainteresowania naukowe
+                koncentrują się wokół cyfrowych modeli terenu – ich tworzenia, analizy, dokładności i zastosowań w
+                naukach o ziemi, głównie geomorfologii, ale nie tylko. Obszary moich zainteresowań badawczych obejmują:
+                geomorfometrię, technologię LiDAR, geomorfologię (klasyfikacje rzeźby i szeroko pojętą rzeźbę
+                antropogeniczną) oraz systemy informacji geograficznej (GIS). Różnorodność działań naukowych, które
+                podejmuję ma swoje odbicie w publikacjach, zwłaszcza z ostatnich kilku lat. Pozdrawiam wszystkich i
+                zachęcam do zapoznania się z moim dorobkiem. Zapraszam również do kontaktu!
+            </li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <ul>
+            <li>
+                <h3 class="title">Kontakt</h3><br>
+                <a id="email" href="mailto:bartlomiej.szypula@us.edu.pl">bartlomiej.szypula@us.edu.pl</a><br><br> dr
+                Bartłomiej Szypuła<br> Instytut Nauk o Ziemi<br>Wydział Nauk Przyrodniczych<br>Uniwersytet Śląski w
+                Katowicach<br>ul. Będzińska 60
+            </li>
+            <li><img src="img/location.png" id="location"></li>
+        </ul>
+    </section>
+
+
+    <script>
+        let dark = true;
+        const elements = document.querySelectorAll('.title');
+
+        const changeBackground = function (event) {
+            event.preventDefault();
+
+            if (dark) {
+                document.body.style.backgroundColor = "#FDFDFD";
+                document.body.style.color = "#005A34";
+                document.getElementById("nav").style.backgroundColor = "#FDFDFD";
+                document.getElementById("nav").style.color = "#005A34";
+                elements.forEach(function(element){
+                    element.style.color = '#005A34';
+                })
+                
+            } else {
+                document.body.style.backgroundColor = "#0B0B0B";
+                document.body.style.color = "#F2ECFF";
+                document.getElementById("nav").style.backgroundColor = "#0B0B0B";
+                elements.forEach(function(element){
+                    element.style.color = '#00C896';
+                })
+                
+            }
+
+            dark = !dark;
+        };
+
+       
+        const button = document.getElementById("btn");
+        button.addEventListener("click", changeBackground);
+
+
+    </script>
+
+    <!--made by Jakub Szypuła-->
+</body>
+
+</html>
